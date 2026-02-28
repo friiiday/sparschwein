@@ -1,119 +1,48 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.5.2" pages="7">
-  <diagram name="| Overall" id="5YUw2e5z27jDl1hZxYcR">
-    <mxGraphModel dx="1546" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="2">
+  <diagram id="NgNSpgihNNdnpfVo28re" name="Entites">
+    <mxGraphModel dx="1295" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="| UseCases" id="anMk_XWvmQLv7EEWCM--">
-    <mxGraphModel dx="1548" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="K2wEuZGMIot_F1lD237v-2" value="&lt;ul&gt;&lt;li&gt;As a User, I want to see current events.&lt;/li&gt;&lt;li style=&quot;&quot;&gt;As a User, I want to check see future events.&lt;/li&gt;&lt;li style=&quot;&quot;&gt;As a User, I want to search for events.&lt;/li&gt;&lt;li style=&quot;&quot;&gt;As a User, I want to search for locations.&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="10" y="10" width="300" height="100" as="geometry" />
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-5" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="PiggyBank" vertex="1">
+          <mxGeometry height="130" width="140" x="40" y="40" as="geometry" />
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="| Pages" id="BdBI4WwDiqqYZK-MEcH5">
-    <mxGraphModel dx="1548" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <UserObject label="Landing: MainPage" link="data:page/id,F7r3I4F7ZZ0z61UjxiHF" id="yWJgloFVhq2eEJRAoTuE-1">
-          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-            <mxGeometry x="354" y="70" width="120" height="60" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="About" link="data:page/id,RObb3R42IHOO5g6DQKtQ" id="yWJgloFVhq2eEJRAoTuE-2">
-          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-            <mxGeometry x="354" y="160" width="120" height="60" as="geometry" />
-          </mxCell>
-        </UserObject>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="|--- Main" id="azFJXtGbDrN7KZAvSEQL">
-    <mxGraphModel dx="1546" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="V_gj4_zNcriN4cbtJVwq-0" />
-        <mxCell id="V_gj4_zNcriN4cbtJVwq-1" parent="V_gj4_zNcriN4cbtJVwq-0" />
-        <mxCell id="nY-K2bygl4A74lIyAx9r-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="V_gj4_zNcriN4cbtJVwq-1" source="nY-K2bygl4A74lIyAx9r-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="280" y="100" as="targetPoint" />
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;- id&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- description&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- targetAmount&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- updatedAt&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="130" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-7" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="180" width="140" x="240" y="40" as="geometry">
+            <mxRectangle height="30" width="70" x="240" y="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-2" value="r&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ight-click on position in map&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="V_gj4_zNcriN4cbtJVwq-1" vertex="1">
-          <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;span style=&quot;font-size: 14px; white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- id&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); white-space-collapse: preserve;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- piggyBankId (FK)&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); white-space-collapse: preserve; font-size: 14px;&quot;&gt;- name&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; white-space-collapse: preserve;&quot;&gt;- role&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; white-space-collapse: preserve;&quot;&gt;  - PARTICIPANT&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; white-space-collapse: preserve;&quot;&gt;  - OWNER&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px; white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- color / avatar&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px; white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- updatedAt&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="130" x="250" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="V_gj4_zNcriN4cbtJVwq-1" target="nY-K2bygl4A74lIyAx9r-19" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="400" y="100" as="sourcePoint" />
-          </mxGeometry>
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-9" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Contribution" vertex="1">
+          <mxGeometry height="300" width="190" x="414" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;dashed=1;" parent="V_gj4_zNcriN4cbtJVwq-1" source="nY-K2bygl4A74lIyAx9r-15" target="nY-K2bygl4A74lIyAx9r-2" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- id&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- participantId (FK)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- piggyBankId (FK)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- amountValue &lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- amountUnit&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;  - MONEY&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;  - PERCENT&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;  - POINTS&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;  - HOURS&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;  - DAYS&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;  - ITEMS&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- amountRaw (e.g. 10 % or 3 Items)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- comment&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- updatedAt&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="180" x="424" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-15" value="Save click position (Lat, Lng)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" parent="V_gj4_zNcriN4cbtJVwq-1" vertex="1">
-          <mxGeometry x="140" y="140" width="80" height="80" as="geometry" />
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-13" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="ConversionRule&amp;nbsp;" vertex="1">
+          <mxGeometry height="130" width="140" x="654" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="V_gj4_zNcriN4cbtJVwq-1" source="nY-K2bygl4A74lIyAx9r-19" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="560" y="170" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-25" value="True" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=0;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#ffe6cc;" parent="nY-K2bygl4A74lIyAx9r-21" vertex="1" connectable="0">
-          <mxGeometry x="-0.6563" y="-1" relative="1" as="geometry">
-            <mxPoint y="-11" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-19" value="clicked on existing marker?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" parent="V_gj4_zNcriN4cbtJVwq-1" vertex="1">
-          <mxGeometry x="440" y="100" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="nY-K2bygl4A74lIyAx9r-23" value="open context menu" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="V_gj4_zNcriN4cbtJVwq-1" vertex="1">
-          <mxGeometry x="280" y="70" width="120" height="60" as="geometry" />
+        <mxCell id="ktZS1_8Td6l76f8G7vx0-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- id&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- piggyBankId&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- unitType&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space-collapse: preserve; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- factorToMoney (e.g. 1 Point = 2 €)&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="130" x="664" y="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="|--- About" id="bFicYp1jSXMWRYBNRXpM">
-    <mxGraphModel dx="1548" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="JSRm4hF6N6aRUq8ZE2-v-0" />
-        <mxCell id="JSRm4hF6N6aRUq8ZE2-v-1" parent="JSRm4hF6N6aRUq8ZE2-v-0" />
-        <mxCell id="JSRm4hF6N6aRUq8ZE2-v-2" value="Landing: MainPage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JSRm4hF6N6aRUq8ZE2-v-1">
-          <mxGeometry x="354" y="70" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="JSRm4hF6N6aRUq8ZE2-v-3" value="About" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JSRm4hF6N6aRUq8ZE2-v-1">
-          <mxGeometry x="354" y="160" width="120" height="60" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="| Components" id="L2851tqgtM4OWZ_v0ruY">
-    <mxGraphModel dx="1548" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="kqUArcuVnqFyZ4yZyL5D" name="Use Cases">
+    <mxGraphModel dx="1295" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="|--- ContextMenu" id="YCB6E-SWRhaUR1HSYS73">
-    <mxGraphModel dx="1068" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="qrEzvz4LnEPikP3-8X8v-1" value="Show &quot;Add&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
-          <mxGeometry x="358" y="210" width="120" height="60" as="geometry" />
+        <mxCell id="9grkfuz5DP7EprvTntHY-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;u style=&quot;&quot;&gt;As an Owner I want to:&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Create a new PiggyBank&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;With a name, description,&amp;nbsp; target amount and due-date&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Manage PiggyBank&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Change Name, description, target amount and due-date&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Delete PiggyBank&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Add participants to my PiggyBank&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;With a name, amount to pay, unit for amount (€, percent, points, hours, days etc.) and comment&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Manage participants&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Name, amount to pay, unit for amount and comment&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;u style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;As an Participant I want to:&lt;/font&gt;&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;u style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;View the amount I have to pay&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;View the amount I paid&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;View the total amount&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;View due-date&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;u style=&quot;font-size: 15px;&quot;&gt;&lt;/u&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="370" width="740" x="40" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="qrEzvz4LnEPikP3-8X8v-2" value="Show &quot;Remove&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
-          <mxGeometry x="358" y="150" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="qrEzvz4LnEPikP3-8X8v-3" value="ContextMenu" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;rounded=0;strokeColor=#d79b00;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
-          <mxGeometry x="348" y="70" width="120" height="80" as="geometry" />
+        <mxCell id="D4d6uol_mmoPaaw_DmK1-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=18;" value=" Business‑Use‑Cases &lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Calculation of progress&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;u&gt;Trigger: GET /piggybanks/{id}&lt;/u&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;totalContributions = SUM(contributions.amountValue)&lt;/span&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;progress = totalContributions / targetAmount&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;remaining = targetAmount - totalContributions&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Calculation per participant&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;u&gt;Trigger: GET /participants/{id}&lt;/u&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;totalPaid = SUM(contributions.amountValue)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;percentOfTotal = totalPaid / totalContributions&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;percentOfTarget = totalPaid / targetAmount&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Validation when creating contributions&lt;/font&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;If amountUnit = PERCENT and targetAmount = null → Error&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;If amountUnit != MONEY and no ConversionRule exists → Error&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;amountValue is calculated on the server side, not provided by the client&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="465" width="620" x="40" y="510" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
