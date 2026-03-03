@@ -2,30 +2,35 @@ import type { ColumnsType, TableProps } from "antd/es/table";
 import Table from "antd/es/table";
 import ActionButtons, { ActionButton } from "../../actionButtons/ActionButtons";
 import type { Participant } from "../../../../model/types";
+import EmptyDisplay from "../../emptyDisplay/EmptyDisplay";
 
-const ParticipantsList = () => {
+interface participantsListProps {
+  participants:  Participant[];
+}
+
+const ParticipantsList = ({ participants }: participantsListProps) => {
 
 
-const data: Participant[] = [
-{
-    id: 1,
-    name: "Some name",
-    toPay: 1000.00,
-    totalAmountPaid: 0.00,
-},
-{
-    id: 2,
-    name: "Some other name",
-    toPay: 1000.00,
-    totalAmountPaid: 0.00,
-},
-{
-    id: 3,
-    name: "A project",
-    toPay: 1000.00,
-    totalAmountPaid: 0.00,
-},
-]
+// const data: Participant[] = [
+// {
+//     id: 1,
+//     name: "Some name",
+//     toPay: 1000.00,
+//     totalAmountPaid: 0.00,
+// },
+// {
+//     id: 2,
+//     name: "Some other name",
+//     toPay: 1000.00,
+//     totalAmountPaid: 0.00,
+// },
+// {
+//     id: 3,
+//     name: "A project",
+//     toPay: 1000.00,
+//     totalAmountPaid: 0.00,
+// },
+// ]
 
 const participantsListColumns: ColumnsType<Participant> = [
   {
@@ -45,21 +50,12 @@ const participantsListColumns: ColumnsType<Participant> = [
     key: 'action',
     render: () => (
         <ActionButtons
-          actionButtonToShow={ ActionButton.ALL }   // TODO: make dynamic
+          actionButtonToShow={ ActionButton.EDIT }   // TODO: make dynamic
           showActionButton={ true }
         />
     ),
   },
 ];
-
-// const tableProps: TableProps<PiggyBankOverviewType> = {
-//     // bordered,
-//     // loading,
-//     // size,
-//     // expandable,
-//     showHeader=false
-//   };
-
 
     return (
         <Table<Participant>
@@ -68,7 +64,10 @@ const participantsListColumns: ColumnsType<Participant> = [
             columns={ participantsListColumns }
             showHeader={ false }
             size="small"
-            dataSource={ data }
+            dataSource={ participants || [] }
+            locale={{
+              emptyText: <EmptyDisplay emptyOption="PARTICIPANTS" />
+            }}
         />
     )
 }

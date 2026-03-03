@@ -18,7 +18,7 @@ const EmptyDisplay: React.FC<emptyDisplayprops> = ({ emptyOption }) => {
 
     return (
         <Empty
-            image="./icons/emote_happy_icon.svg"
+            image="/icons/emote_happy_icon.svg"
             styles={{ image: { height: 60 } }}
             description={
             <Typography.Text>

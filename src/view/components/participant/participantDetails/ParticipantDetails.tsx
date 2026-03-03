@@ -1,5 +1,6 @@
 import type { Participant } from "../../../../model/types";
 import Headline from "../../headline/Headline";
+import ParticipantPayHistory from "../../payHistory/ParticipantPayHistory";
 
 const ParticipantDetails = () => {
 
@@ -14,10 +15,7 @@ const ParticipantDetails = () => {
         <span className="participant-details">
             <Headline text={ participant.name } isEditable={ true } />      {/* TODO: Add logic to change name */}
             { participant.totalAmountPaid }$/{ participant.toPay }$
-            <br /> History:
-            <br />- xx
-            {/* TODO: Add PayHistory */}
-
+            <ParticipantPayHistory />
         </span>
     )
 }

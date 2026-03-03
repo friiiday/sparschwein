@@ -15,7 +15,7 @@ const EditButton: React.FC<editButtonProps> = () => {
                     className="edit-button"
                     onClick={ handleClick }
                 >
-                    <img src="./icons/edit_icon.svg" alt="EDIT" /> 
+                    <img src="/icons/edit_icon.svg" alt="EDIT" /> 
                 </span>
     )
 }

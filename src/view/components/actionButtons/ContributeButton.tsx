@@ -15,7 +15,7 @@ const ContributeButton: React.FC<contributeButtonProps> = () => {
                     className="contribute-button"
                     onClick={ handleClick }
                 >
-                    <img src="./icons/contribute_icon.svg" alt="CONTRIBUTE" />  
+                    <img src="/icons/contribute_icon.svg" alt="CONTRIBUTE" />  
                 </span>
     )
 }

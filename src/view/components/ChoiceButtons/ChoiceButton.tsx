@@ -7,9 +7,9 @@ interface choiceButtonProps {
 const ChoiceButton: React.FC<choiceButtonProps> = ({ title, onClick }) => {
 
     return (
-        <span className="choice-button" onClick={ onClick }>
-            { title }
-        </span>
+            <span className="choice-button" onClick={ onClick }>
+                { title }
+            </span>
     )
 }
 

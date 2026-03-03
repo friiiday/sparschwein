@@ -16,3 +16,12 @@ export type PiggyBankContributionHistory = {
     date: string;
     amount: number;
 }
+
+export type ChoiceButtons = {
+    positive: {
+        title: string;
+    }
+    negative: {
+        title: string;
+    }
+}

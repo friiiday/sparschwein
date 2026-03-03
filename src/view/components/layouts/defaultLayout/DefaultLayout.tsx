@@ -3,22 +3,22 @@ import { Content, Footer, Header } from "antd/es/layout/layout"
 import Headline from "../../headline/Headline";
 import type { ReactNode } from "react";
 
-export interface mainLayout {
+export interface defaultLayout {
     // header 
     viewHeadline: string;
 
     // content
-    content: ReactNode;
+    children: ReactNode;
 
     // footer
-    choiceButtons: ReactNode;
+    choiceButtons?: ReactNode;
     
 }
 
 
-const MainLayout: React.FC<mainLayout> = ({
+const DefaultLayout: React.FC<defaultLayout> = ({
     viewHeadline,
-    content,
+    children,
     choiceButtons
 }) => {
 
@@ -59,12 +59,12 @@ const MainLayout: React.FC<mainLayout> = ({
                     <Headline text={ viewHeadline } isEditable={ false } />
                 </Header>
                 <Content style={ contentStyle }>
-                    { content }
+                    { children }
                 </Content>
-                <Footer style={ footerStyle }>{ choiceButtons }</Footer>
+                <Footer style={ footerStyle }>{ choiceButtons ? choiceButtons : <></> }</Footer>
             </Layout>
         </Flex>
     )
 }
 
-export default MainLayout;
+export default DefaultLayout;
