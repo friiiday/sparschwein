@@ -2,9 +2,9 @@ import type { ColumnsType, TableProps } from "antd/es/table";
 import Table from "antd/es/table";
 import ActionButtons, { ActionButton } from "../actionButtons/ActionButtons";
 
-const PiggyBankOverview = () => {
+const PiggyBanksList = () => {
 
-type PiggyBankOverviewType = {
+type PiggyBanksListType = {
     key: number;
     id: number;
     name: string;
@@ -14,7 +14,7 @@ type PiggyBankOverviewType = {
 }
 
 
-const data: PiggyBankOverviewType[] = [
+const data: PiggyBanksListType[] = [
 {
     key: 0,
     id: 1,
@@ -41,7 +41,7 @@ const data: PiggyBankOverviewType[] = [
 },
 ]
 
-const piggyBankOverviewColumns: ColumnsType<PiggyBankOverviewType> = [
+const piggyBankOverviewColumns: ColumnsType<PiggyBanksListType> = [
   {
     title: 'Name',
     dataIndex: 'name',
@@ -80,7 +80,7 @@ const piggyBankOverviewColumns: ColumnsType<PiggyBankOverviewType> = [
 
 
     return (
-        <Table<PiggyBankOverviewType>
+        <Table<PiggyBanksListType>
             // {...tableProps}
             pagination={ false }
             columns={ piggyBankOverviewColumns }
@@ -91,4 +91,4 @@ const piggyBankOverviewColumns: ColumnsType<PiggyBankOverviewType> = [
     )
 }
 
-export default PiggyBankOverview
+export default PiggyBanksList;
