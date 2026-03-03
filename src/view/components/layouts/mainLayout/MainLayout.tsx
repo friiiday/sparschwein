@@ -1,6 +1,6 @@
 import { Flex, Layout } from "antd"
 import { Content, Footer, Header } from "antd/es/layout/layout"
-import Headline from "../components/headline/Headline";
+import Headline from "../../headline/Headline";
 import type { ReactNode } from "react";
 
 export interface mainLayout {
@@ -11,7 +11,7 @@ export interface mainLayout {
     content: ReactNode;
 
     // footer
-    // buttons: ReactNode;
+    choiceButtons: ReactNode;
     
 }
 
@@ -19,7 +19,7 @@ export interface mainLayout {
 const MainLayout: React.FC<mainLayout> = ({
     viewHeadline,
     content,
-    // buttons
+    choiceButtons
 }) => {
 
     const headerStyle: React.CSSProperties = {
@@ -61,7 +61,7 @@ const MainLayout: React.FC<mainLayout> = ({
                 <Content style={ contentStyle }>
                     { content }
                 </Content>
-                <Footer style={ footerStyle }>Footer</Footer>
+                <Footer style={ footerStyle }>{ choiceButtons }</Footer>
             </Layout>
         </Flex>
     )

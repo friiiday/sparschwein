@@ -1,5 +1,6 @@
 import type { ColumnsType, TableProps } from "antd/es/table";
 import Table from "antd/es/table";
+import ActionButtons, { ActionButton } from "../actionButtons/ActionButtons";
 
 const PiggyBankOverview = () => {
 
@@ -7,8 +8,8 @@ type PiggyBankOverviewType = {
     key: number;
     id: number;
     name: string;
-    totalAmount: number;
-    amountPaid: number;
+    totalAmount: number;  // FIXME: should be calculated beforhand
+    amountPaid: number;   // FIXME: should be calculated beforhand
     dueIn: number; // delta due - today
 }
 
@@ -58,10 +59,13 @@ const piggyBankOverviewColumns: ColumnsType<PiggyBankOverviewType> = [
     dataIndex: "dueIn"
   },
   {
-    title: 'edit',
+    title: 'action',
     key: 'action',
     render: () => (
-        <>Edit</>
+        <ActionButtons
+          actionButtonToShow={ ActionButton.ALL }   // TODO: make dynamic
+          showActionButton={ true }
+        />
     ),
   },
 ];
