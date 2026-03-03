@@ -1,6 +1,6 @@
 import ChoiceButtonsArea from "../components/ChoiceButtons/ChoiceButtonsArea"
 import DefaultLayout from "../components/layouts/defaultLayout/DefaultLayout"
-import PiggyBankDetails from "../components/piggyBankDetails/PiggyBankDetails"
+import PiggyBankForm from "../components/piggyBankForm/PiggyBankForm"
 
 const AddPiggyBank = () => {
 
@@ -14,7 +14,7 @@ const AddPiggyBank = () => {
                 />
             }    
         >
-            <PiggyBankDetails />
+            <PiggyBankForm />
         </DefaultLayout>
     )
 }
