@@ -2,15 +2,58 @@ import { useState } from "react";
 import AddButton from "../components/addButton/AddButton";
 import ChoiceButtonsArea from "../components/ChoiceButtons/ChoiceButtonsArea";
 import DefaultLayout from "../components/layouts/defaultLayout/DefaultLayout";
-import type { Participant } from "../../model/types";
 import ParticipantsList from "../components/participant/participantsList/ParticipantsList";
 import ModalParticipantAdd from "../components/modals/ModalParticipantAdd";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../../control/hooks/useLocalStorage";
+import { useSessionStorage } from "../../control/hooks/useSessionStorage";
+import type { Participant, PiggyBankData } from "../../model/types";
 
 
 const AddParticipants = () => {
 
     const [participants, setParticipants] = useState<Participant[]>([])
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const navigate = useNavigate()
+
+
+    const [currentPiggyBankData, setCurrentPiggyBankData] = useSessionStorage<PiggyBankData>("current-piggybank", {
+        name: "",
+        description: "",
+        totalAmount: null,
+        due: null,
+        participants: []
+    });
+
+    const [__, setPiggyBankData] = useLocalStorage<PiggyBankData[]>("your-piggy-banks", [])
+
+    const saveToLocalStorage = () => {
+        setPiggyBankData(prev => ([
+            ...prev,
+            currentPiggyBankData
+        ]))
+    }
+
+    const clearCurrentPiggyBankData = () => {
+        setCurrentPiggyBankData(() => ({
+            name: "",
+            description: "",
+            totalAmount: null,
+            due: null,
+            participants: []
+        }))
+    }
+
+    const handleClickedNegative = () => navigate(-1)
+    const handleClickedPositive = () => {
+    
+        saveToLocalStorage()
+        clearCurrentPiggyBankData()
+
+        navigate("/piggybanks")
+    }
+
 
     const updateParticipants = (newParticipant: Participant) => { 
         setParticipants(currentParticipants => [...currentParticipants, newParticipant]); 
@@ -29,14 +72,17 @@ const AddParticipants = () => {
         setIsModalOpen(false);
     }
 
-
     return (
         <DefaultLayout
             viewHeadline="Participants"
             choiceButtons={
                 <ChoiceButtonsArea 
-                    negative={{ title: "Back" }}
-                    positive={{ title: "Create" }}
+                    negative={{ title: "Back", onClick() {
+                        handleClickedNegative()
+                    }, }}
+                    positive={{ title: "Create", onClick() {
+                        handleClickedPositive()
+                    }, }}
                 />
             }
         >   
@@ -49,11 +95,10 @@ const AddParticipants = () => {
 
             <AddButton title="Add" onClick={ handleClickedAdd }/>
 
-            <ParticipantsList participants={ participants }/>
-            {/* {
-                participants.length == 0 &&
-                    <EmptyDisplay emptyOption="PARTICIPANTS" />
-            } */}
+            <ParticipantsList 
+                participants={ participants }
+                actionButtonsToShow="EDIT"
+            />
 
         </DefaultLayout>
     )

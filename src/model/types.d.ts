@@ -6,6 +6,24 @@ export type Participant = {
     totalAmountPaid: number;   // FIXME: should be calculated beforhand
 }
 
+export type PiggyBank = {
+    key: number;
+    id: number;
+    name: string;
+    totalAmount: number;  // FIXME: should be calculated beforhand
+    amountPaid: number;   // FIXME: should be calculated beforhand
+    dueIn: number; // delta due - today
+}
+
+export type PiggyBankData = {
+  name: string;
+  description: string;
+  totalAmount: number | null;
+  due: Dayjs | null;
+  participants: Participant[] | [];
+};
+
+
 export type ParticipantContributionHistory = {
     date: string;
     amount: number;
@@ -18,10 +36,12 @@ export type PiggyBankContributionHistory = {
 }
 
 export type ChoiceButtons = {
-    positive: {
+    positive?: {
         title: string;
+        onClick: () => void;
     }
-    negative: {
+    negative?: {
         title: string;
+        onClick: () => void;
     }
 }

@@ -26,14 +26,23 @@ export const ActionButtons: React.FC<actionButtonsProps> = ({ showActionButton, 
     return (
         <span className="action buttons">
             {
-                showAllButtons || showEditButton
+                showEditButton
                 &&
                     <EditButton />
             }
             {
-                showAllButtons || showContributeButton
+                showContributeButton
                 &&
                     <ContributeButton />
+            }
+            {
+                showAllButtons 
+                &&
+                    <>
+                        <EditButton />
+                        <ContributeButton />
+                    </>
+
             }
             {
                 !showActionButton &&

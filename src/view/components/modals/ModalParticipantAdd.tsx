@@ -1,6 +1,7 @@
 import { Form, Input, Modal } from "antd";
-import type { Participant } from "../../../model/types";
+import type { Participant, PiggyBankData } from "../../../model/types";
 import { useState } from "react";
+import { useSessionStorage } from "../../../control/hooks/useSessionStorage";
 
 interface modalParticipantAdd {
     isModalOpen: boolean;
@@ -11,20 +12,38 @@ interface modalParticipantAdd {
 const ModalParticipantAdd: React.FC<modalParticipantAdd> = ({ isModalOpen, onOk, onCancel }) => {
 
     const [participantName, setParticipantName] = useState<string>("")
+    const [id, setId] = useState<number>(0)
 
+    const [_, setFormData] = useSessionStorage<PiggyBankData>("current-piggybank", {
+        name: "",
+        description: "",
+        totalAmount: null,
+        due: null,
+        participants: []
+    });
+
+    const updateFormData = (newParticipant: Participant) => {
+        setFormData(prev => ({
+            ...prev, 
+            participants: [...prev.participants, newParticipant]
+        }))
+    }
 
     const clearInput = () => setParticipantName("")
 
     const handleClickedOk = () => { 
 
+        setId(id+1)
+
         const newParticipant: Participant = { 
-            id: 123, // TODO: make dynamic
+            id,
             name: participantName ,
             toPay: 0.00,
             totalAmountPaid: 0.00  
         }; 
 
         onOk?.(newParticipant); 
+        updateFormData(newParticipant)
         clearInput()
     };
 

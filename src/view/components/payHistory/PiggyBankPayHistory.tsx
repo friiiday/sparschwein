@@ -1,6 +1,6 @@
 import type { ColumnsType } from "antd/es/table";
 import type { PiggyBankContributionHistory } from "../../../model/types";
-import ActionButtons, { ActionButton } from "../actionButtons/ActionButtons";
+import ActionButtons from "../actionButtons/ActionButtons";
 import Table from "antd/es/table";
 
 

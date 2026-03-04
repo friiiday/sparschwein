@@ -1,47 +1,17 @@
-import type { ColumnsType, TableProps } from "antd/es/table";
+import type { ColumnsType } from "antd/es/table";
 import Table from "antd/es/table";
 import ActionButtons, { ActionButton } from "../actionButtons/ActionButtons";
+import EmptyDisplay from "../emptyDisplay/EmptyDisplay";
+import type { PiggyBank } from "../../../model/types";
 
-const PiggyBanksList = () => {
-
-type PiggyBanksListType = {
-    key: number;
-    id: number;
-    name: string;
-    totalAmount: number;  // FIXME: should be calculated beforhand
-    amountPaid: number;   // FIXME: should be calculated beforhand
-    dueIn: number; // delta due - today
+interface piggyBanksListProps {
+    piggyBanks: PiggyBank[]
 }
 
+const PiggyBanksList: React.FC<piggyBanksListProps> = ({ piggyBanks }) => {
 
-const data: PiggyBanksListType[] = [
-{
-    key: 0,
-    id: 1,
-    name: "Some name",
-    totalAmount: 1000.00,
-    amountPaid: 0.00,
-    dueIn: 5
-},
-{
-    key: 1,
-    id: 2,
-    name: "Some other name",
-    totalAmount: 1001.00,
-    amountPaid: 346.66,
-    dueIn: 10
-},
-{
-    key: 2,
-    id: 3,
-    name: "A project",
-    totalAmount: 1000,
-    amountPaid: 0.06,
-    dueIn: 1000
-},
-]
 
-const piggyBankOverviewColumns: ColumnsType<PiggyBanksListType> = [
+const piggyBankOverviewColumns: ColumnsType<PiggyBank> = [
   {
     title: 'Name',
     dataIndex: 'name',
@@ -80,13 +50,16 @@ const piggyBankOverviewColumns: ColumnsType<PiggyBanksListType> = [
 
 
     return (
-        <Table<PiggyBanksListType>
+        <Table<PiggyBank>
             // {...tableProps}
             pagination={ false }
             columns={ piggyBankOverviewColumns }
             showHeader={ false }
             size="small"
-            dataSource={ data }
+            dataSource={ piggyBanks || [] }
+            locale={{
+              emptyText: <EmptyDisplay emptyOption="PIGGYBANKS" />
+            }}
         />
     )
 }
