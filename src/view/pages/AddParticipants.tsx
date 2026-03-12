@@ -21,6 +21,7 @@ const AddParticipants = () => {
     const [currentPiggyBankData, setCurrentPiggyBankData] = useSessionStorage<PiggyBankData>("current-piggybank", {
         name: "",
         description: "",
+        amountPaid: null,
         totalAmount: null,
         due: null,
         participants: []
@@ -40,6 +41,7 @@ const AddParticipants = () => {
             name: "",
             description: "",
             totalAmount: null,
+            amountPaid: null,
             due: null,
             participants: []
         }))

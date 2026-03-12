@@ -9,10 +9,15 @@ import PiggyBankDetailsPage from "../pages/PiggyBankDetailsPage";
 export function AppRoutes() {
   return useRoutes([
     { path: "/", element: <OverviewPiggyBanks /> },
+    { path: "*", element: <NotFound /> },
+    
+    // Piggy Banks
     { path: "/piggybanks", element: <OverviewPiggyBanks /> },
     { path: "/piggybanks/add", element: <AddPiggyBank /> },
     { path: "/piggybanks/details/:id", element: <PiggyBankDetailsPage /> },
+
+    // Participants
     { path: "/participants/add", element: <AddParticipants /> },
-    { path: "*", element: <NotFound /> },
+    { path: "/participants/add", element: <AddParticipants /> },
   ]);
 }

@@ -1,33 +1,22 @@
-import type { Participant } from "../../../model/types"
+import type { PiggyBankData } from "../../../model/types"
+import Balance from "../balance/Balance";
 import ParticipantsList from "../participant/participantsList/ParticipantsList"
 
+
 interface piggyBankDetailsProps {
-    participants:  Participant[];
+    piggyBankData:  PiggyBankData;
 }
 
-const PiggyBankDetails: React.FC<piggyBankDetailsProps> = ({ participants }) => {
+const PiggyBankDetails: React.FC<piggyBankDetailsProps> = ({ piggyBankData }) => {
 
-    // TODO: Make dynamic ⬇️
-    const dueIn = {days: 6, months: 0, years: 0}
-    const toPay = 1000
-    const paid = 500
+    const { due, totalAmount, amountPaid, participants } = { ...piggyBankData }
 
     return (
         <span className="piggy-bank-details">
             <span className="due-in">
-                Due-In 
-                { dueIn.days } days
-                { dueIn.months } months
-                { dueIn.years } years
+                Due-In { due }
             </span>
-            <span className="balance">
-                <span className="to-pay">
-                    { toPay }
-                </span>
-                <span className="paid">
-                    { paid }
-                </span>
-            </span>
+            <Balance paid={ amountPaid! } total={ totalAmount! } />
             <ParticipantsList
                 participants={ participants }
                 actionButtonsToShow="ALL"

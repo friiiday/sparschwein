@@ -10,12 +10,21 @@ interface participantsListProps {
 }
 
 const ParticipantsList: React.FC<participantsListProps> = ({ participants, actionButtonsToShow }) => {
+  
+  const handleClickedContribute = () => {
+    console.log("contrib");
+    
+  }
 
+  const handleClickedEdit = () => {
+    console.log("eddit");
+    
+  }
 
 const participantsListColumns: ColumnsType<Participant> = [
   {
-    title: "key",
-    dataIndex:"key"
+    title: "id",
+    dataIndex:"id"
   },
   {
     title: 'Name',
@@ -34,7 +43,9 @@ const participantsListColumns: ColumnsType<Participant> = [
     key: 'action',
     render: () => (
         <ActionButtons
-          actionButtonToShow={ actionButtonsToShow }   // TODO: make dynamic
+          actionButtonToShow={ actionButtonsToShow }
+          contributeCallback={ handleClickedContribute }
+          editCallback={ handleClickedEdit }
           showActionButton={ true }
         />
     ),
@@ -43,7 +54,6 @@ const participantsListColumns: ColumnsType<Participant> = [
 
     return (
         <Table<Participant>
-            // {...tableProps}
             pagination={ false }
             columns={ participantsListColumns }
             showHeader={ false }

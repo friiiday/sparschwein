@@ -1,4 +1,5 @@
-import type { Participant } from "../../model/types"
+import { useLocalStorage } from "../../control/hooks/useLocalStorage";
+import type { PiggyBankData } from "../../model/types"
 import ChoiceButtonsArea from "../components/ChoiceButtons/ChoiceButtonsArea"
 import DefaultLayout from "../components/layouts/defaultLayout/DefaultLayout"
 import PiggyBankDetails from "../components/piggyBankDetails/PiggyBankDetails"
@@ -8,41 +9,33 @@ const PiggyBankDetailsPage = () => {
 
     const { id } = useParams();
 
-    // TODO: Make dynamic ⬇️
-    const pgName = "test"
-        
-    const participants: Participant[] = [
-    {
-        id: 1,
-        name: "Some name",
-        toPay: 1000.00,
-        totalAmountPaid: 0.00,
-    },
-    {
-        id: 2,
-        name: "Some other name",
-        toPay: 1000.00,
-        totalAmountPaid: 0.00,
-    },
-    {
-        id: 3,
-        name: "A participant",
-        toPay: 1000.00,
-        totalAmountPaid: 0.00,
-    },
-    ]
+    const [piggyBanks, _] = useLocalStorage<PiggyBankData[]>("your-piggy-banks", [])
+
+    const handleClickedNegative = () => {
+        console.log(id);   
+    }
+
+    const idNumber = Number(id)
 
     return (
         <DefaultLayout
-            viewHeadline={ pgName }
+            viewHeadline={ piggyBanks[idNumber].name }
             choiceButtons={
                 <ChoiceButtonsArea 
-                    negative={{ title: "Back" }}
+                    negative={{ 
+                        title: "Back", onClick() {
+                            handleClickedNegative()
+                        }, 
+                    }}
+                    // FIXME: Why have to add both positive and negative to show?
+                    positive={{ 
+                        title: "", onClick() {}, 
+                    }}
                 />
             }
         >
             <PiggyBankDetails
-                participants={ participants || [] }
+                piggyBankData={ piggyBanks[idNumber] }
             />
         </DefaultLayout>
     )

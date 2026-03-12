@@ -16,13 +16,19 @@ export type PiggyBank = {
 }
 
 export type PiggyBankData = {
-  name: string;
-  description: string;
-  totalAmount: number | null;
-  due: Dayjs | null;
-  participants: Participant[] | [];
+    id: number;
+    name: string;
+    description: string;
+    totalAmount: number | null;
+    amountPaid: number | null;
+    due: dayjs | null;
+    participants: Participant[] | [];
 };
 
+export type NewPiggyBankData = {
+    pigBank: PiggyBank;
+    participants: Participant[]
+}
 
 export type ParticipantContributionHistory = {
     date: string;
@@ -44,4 +50,14 @@ export type ChoiceButtons = {
         title: string;
         onClick: () => void;
     }
+}
+
+export type ActionButtons = {
+    editCallback?: () => void;
+    contributeCallback?: () => void;
+}
+
+// ROUTES
+export interface PiggyBankDetailsParams {
+  id: string;
 }

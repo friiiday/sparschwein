@@ -1,19 +1,11 @@
+import type { ActionButtons } from "../../../model/types";
 
-interface editButtonProps {
-
-}
-
-const EditButton: React.FC<editButtonProps> = () => {
-
-    const handleClick = () => {
-        console.log("Edit");
-        
-    }
+const EditButton: React.FC<ActionButtons> = ({ editCallback }) => {
 
     return (
                 <span 
                     className="edit-button"
-                    onClick={ handleClick }
+                    onClick={ editCallback }
                 >
                     <img src="/icons/edit_icon.svg" alt="EDIT" /> 
                 </span>

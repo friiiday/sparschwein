@@ -13,10 +13,12 @@ export type ActionButton = (typeof ActionButton)[keyof typeof ActionButton];
 
 interface actionButtonsProps {
     showActionButton: boolean;
-    actionButtonToShow?: "EDIT" | "CONTRIBUTE" | "ALL"
+    actionButtonToShow?: "EDIT" | "CONTRIBUTE" | "ALL";
+    editCallback?: () => void;
+    contributeCallback?: () => void;
 }
 
-export const ActionButtons: React.FC<actionButtonsProps> = ({ showActionButton, actionButtonToShow }) => {
+export const ActionButtons: React.FC<actionButtonsProps> = ({ showActionButton, actionButtonToShow, editCallback, contributeCallback }) => {
 
     const showEditButton = ActionButton.EDIT == actionButtonToShow && showActionButton
     const showContributeButton = ActionButton.CONTRIBUTE == actionButtonToShow && showActionButton
@@ -28,19 +30,19 @@ export const ActionButtons: React.FC<actionButtonsProps> = ({ showActionButton, 
             {
                 showEditButton
                 &&
-                    <EditButton />
+                    <EditButton editCallback={ editCallback} />
             }
             {
                 showContributeButton
                 &&
-                    <ContributeButton />
+                    <ContributeButton contributeCallback={ contributeCallback } />
             }
             {
                 showAllButtons 
                 &&
                     <>
-                        <EditButton />
-                        <ContributeButton />
+                        <EditButton editCallback={ editCallback} />
+                        <ContributeButton contributeCallback={ contributeCallback } />
                     </>
 
             }

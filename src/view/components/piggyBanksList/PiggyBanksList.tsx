@@ -2,56 +2,54 @@ import type { ColumnsType } from "antd/es/table";
 import Table from "antd/es/table";
 import ActionButtons, { ActionButton } from "../actionButtons/ActionButtons";
 import EmptyDisplay from "../emptyDisplay/EmptyDisplay";
-import type { PiggyBank } from "../../../model/types";
+import type { PiggyBankData } from "../../../model/types";
+import { useNavigate } from "react-router-dom";
 
 interface piggyBanksListProps {
-    piggyBanks: PiggyBank[]
+    piggyBanks: PiggyBankData[]
 }
 
 const PiggyBanksList: React.FC<piggyBanksListProps> = ({ piggyBanks }) => {
 
+    const navigate = useNavigate()
 
-const piggyBankOverviewColumns: ColumnsType<PiggyBank> = [
-  {
-    title: 'Name',
-    dataIndex: 'name',
-  },
-  {
-    title: 'totalAmount',
-    dataIndex: 'totalAmount',
-  },
-  {
-    title: 'amountPaid',
-    dataIndex: 'amountPaid'
-  },
-  {
-    title: "dueIn",
-    dataIndex: "dueIn"
-  },
-  {
-    title: 'action',
-    key: 'action',
-    render: () => (
-        <ActionButtons
-          actionButtonToShow={ ActionButton.ALL }   // TODO: make dynamic
-          showActionButton={ true }
-        />
-    ),
-  },
-];
+    const handleRowClicked = (record: PiggyBankData) => {
+        console.log(record);
+        navigate(`/piggybanks/details/${ record.id }`)
+        
+    }
 
-// const tableProps: TableProps<PiggyBankOverviewType> = {
-//     // bordered,
-//     // loading,
-//     // size,
-//     // expandable,
-//     showHeader=false
-//   };
-
+  const piggyBankOverviewColumns: ColumnsType<PiggyBankData> = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+    },
+    {
+      title: 'totalAmount',
+      dataIndex: 'totalAmount',
+    },
+    {
+      title: 'amountPaid',
+      dataIndex: 'amountPaid'
+    },
+    {
+      title: "dueIn",
+      dataIndex: "dueIn"
+    },
+    {
+      title: 'action',
+      key: 'action',
+      render: () => (
+          <ActionButtons
+            actionButtonToShow={ ActionButton.EDIT }
+            showActionButton={ true }
+          />
+      ),
+    },
+  ];
 
     return (
-        <Table<PiggyBank>
-            // {...tableProps}
+        <Table<PiggyBankData>
             pagination={ false }
             columns={ piggyBankOverviewColumns }
             showHeader={ false }
@@ -60,6 +58,9 @@ const piggyBankOverviewColumns: ColumnsType<PiggyBank> = [
             locale={{
               emptyText: <EmptyDisplay emptyOption="PIGGYBANKS" />
             }}
+            onRow={(record) => (
+                { onClick: () => { handleRowClicked(record) }}
+            )}
         />
     )
 }

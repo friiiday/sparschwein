@@ -1,19 +1,11 @@
+import type { ActionButtons } from "../../../model/types";
 
-interface contributeButtonProps {
-
-}
-
-const ContributeButton: React.FC<contributeButtonProps> = () => {
-
-    const handleClick = () => {
-        console.log("contribute");
-        
-    }
+const ContributeButton: React.FC<ActionButtons> = ({ contributeCallback }) => {
 
     return (
                 <span 
                     className="contribute-button"
-                    onClick={ handleClick }
+                    onClick={ contributeCallback }
                 >
                     <img src="/icons/contribute_icon.svg" alt="CONTRIBUTE" />  
                 </span>
